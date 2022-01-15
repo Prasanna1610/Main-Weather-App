@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WeatherNow | Imaginnovate</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body onload=startTime()>
+    <script>
+    //Digital Clock
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById("currentTime").innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
+
+	<div class="wrapper">
+    <header class="header">Weather forecast</header>
+    <input type="text" name="city" id="city" class="text-position" placeholder="Enter City">
+    <button type="button" id="buttonCli" class="b">
+	<p class="s">search</p>
+	</button>
+
+  </div>
+
+    <div id="localData">
+      <span id="currentTime"></span>
+    </div>
+
+    <div id="weatherBox" class="container glass">
+      <div class="col-md-3">
+       
+    <h2 id="day1">Day 1</h2>
+		<table class="k">
+
+<tr id="table">
+  <td colspan=2 id="date1">Date:DD/MM/YYYY</th>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8" colspan=2 id="temp1">Temperature</td>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8">Min</td>
+  <td bgcolor="#A8A8A8">Max</td>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8" id="min1">xx.xx</td>
+  <td bgcolor="#A8A8A8" id="max1">xx.xx</td>
+</tr>
+<tr>
+  <td>Pressure</td>
+  <td id="pres1">xxx.xx</td>
+</tr>
+<tr>
+  <td>Humidity</td>
+  <td id="hum1">xxx.xx</td>
+</tr>
+</table>
+      </div>
+      <div class="col-md-3">
+        <h2 id="day2">Day 2</h2>
+        <table class="k">
+
+<tr id="table">
+  <td colspan=2 id="date2">Date:DD/MM/YYYY</th>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8" colspan=2 id="temp2">Temperature</td>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8">Min</td>
+  <td bgcolor="#A8A8A8">Max</td>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8" id="min2">xx.xx</td>
+  <td bgcolor="#A8A8A8" id="max2">xx.xx</td>
+</tr>
+<tr>
+  <td>Pressure</td>
+  <td id="pres2">xxx.xx</td>
+</tr>
+<tr>
+  <td>Humidity</td>
+  <td id="hum2">xxx.xx</td>
+</tr>
+</table>
+      </div>
+      <div class="col-md-3">
+        <h2 id="day3">Day 3</h2>
+        <table class="k">
+
+<tr id="table">
+  <td colspan=2 id="date3">Date:DD/MM/YYYY</th>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8" colspan=2 id="temp3">Temperature</td>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8">Min</td>
+  <td bgcolor="#A8A8A8">Max</td>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8" id="min3">xx.xx</td>
+  <td bgcolor="#A8A8A8" id="max3">xx.xx</td>
+</tr>
+<tr>
+  <td>Pressure</td>
+  <td id="pres3">xxx.xx</td>
+</tr>
+<tr>
+  <td>Humidity</td>
+  <td id="hum3">xxx.xx</td>
+</tr>
+</table>
+      </div>
+      <div class="col-md-3">
+        <h2 id="day4">Day 4</h2>
+        <table class="k">
+
+<tr id="table">
+  <td colspan=2 id="date4">Date:DD/MM/YYYY</th>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8" colspan=2 id="temp4">Temperature</td>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8">Min</td>
+  <td bgcolor="#A8A8A8">Max</td>
+</tr>
+<tr>
+  <td bgcolor="#A8A8A8" id="min4">xx.xx</td>
+  <td bgcolor="#A8A8A8" id="max4">xx.xx</td>
+</tr>
+<tr>
+  <td>Pressure</td>
+  <td id="pres4">xxx.xx</td>
+</tr>
+<tr>
+  <td>Humidity</td>
+  <td id="hum4">xxx.xx</td>
+</tr>
+</table>
+      </div>
+     
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="weather5.js"></script>
+  </body>
+</html>
